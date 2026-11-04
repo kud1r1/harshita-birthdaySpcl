@@ -1,65 +1,1008 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f5f0e7">
-<meta name="description" content="A small birthday page. November 10.">
-<title>November 10 · a little birthday edition</title>
-<style>
-:root{--paper:#f5f0e7;--cream:#fffcf5;--ink:#292923;--muted:#77766c;--line:#d8d1c5;--coffee:#654537;--accent:#a54f35;--olive:#777d61}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,sans-serif}button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:4px}h1,h2,h3,p{margin:0}.serif{font-family:Georgia,Times New Roman,serif}.shell{width:min(1080px,calc(100% - 44px));margin:auto}.top{height:78px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:16px}.wordmark{font:600 12px/1.3 system-ui;letter-spacing:.19em;text-transform:uppercase}.small-date{font-size:12px;letter-spacing:.13em;color:var(--muted);text-transform:uppercase}.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;min-height:610px;align-items:center;padding:90px 0 100px}.kicker{font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:22px}.hero h1{font:normal clamp(60px,9vw,118px)/.99 Georgia,serif;letter-spacing:-.07em;max-width:710px}.hero h1 i{color:var(--coffee);font-weight:normal}.intro{font-size:17px;color:#5e5b52;max-width:440px;margin:28px 0 30px}.btn{border:1px solid var(--ink);background:var(--ink);color:var(--cream);padding:13px 22px;border-radius:3px;transition:background .2s,transform .2s}.btn:hover{background:var(--coffee);transform:translateY(-2px)}.btn.ghost{background:transparent;color:var(--ink)}.btn.ghost:hover{background:#ebe4da}.hero-art{position:relative;min-height:430px;display:grid;place-items:center}.paper{width:min(350px,90%);height:425px;background:#eee5d6;border:1px solid #d1c4ae;box-shadow:17px 20px 0 #e2d9ca,20px 25px 35px #38312020;transform:rotate(5deg);padding:30px 28px;display:flex;flex-direction:column;justify-content:space-between;position:relative}.paper:before{content:"";position:absolute;left:0;right:0;top:0;bottom:0;background:repeating-linear-gradient(transparent 0,transparent 34px,#c8bda61f 35px,#c8bda61f 36px);pointer-events:none}.paper .topline{font:11px system-ui;letter-spacing:.17em;color:#6a5745}.paper .illustration{font:normal 78px Georgia,serif;color:#79503c;text-align:center;line-height:1}.dessert{width:154px;height:112px;margin:auto;position:relative;transform:rotate(-5deg)}.dessert .dust{height:13px;background:#543c2e;border-radius:8px 8px 0 0}.dessert .layer{height:25px;background:#e7cda3;border:2px solid #a8835e;border-top:none}.dessert .layer:nth-child(3){background:#a47758}.dessert .layer:nth-child(4){background:#f7e9c9;border-radius:0 0 12px 12px}.paper .scribble{font:italic 25px/1.3 Georgia,serif;color:#6f4b3b;transform:rotate(-5deg)}.paper .folio{font:11px system-ui;color:#8e806c;letter-spacing:.13em}.corner-mark{position:absolute;right:-25px;bottom:35px;background:#a74f36;color:#fff;padding:12px 18px;transform:rotate(10deg);font-size:11px;letter-spacing:.12em;text-transform:uppercase;box-shadow:0 10px 22px #0002}.rule{border-top:1px solid var(--line)}.section{padding:85px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:32px}.section-head h2{font:normal clamp(37px,5vw,58px)/1.1 Georgia,serif;letter-spacing:-.045em}.sub{font-size:14px;color:var(--muted);max-width:300px}.index{font:12px system-ui;letter-spacing:.12em;color:var(--accent)}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.tile{border:1px solid var(--line);background:var(--cream);padding:28px;min-height:255px;text-align:left;display:flex;flex-direction:column;align-items:start;transition:transform .2s,box-shadow .2s}.tile:hover{transform:translateY(-4px);box-shadow:0 12px 25px #3d302017}.tile .num{font:11px system-ui;letter-spacing:.15em;color:var(--accent)}.tile .symbol{font-size:42px;margin:12px 0 16px;filter:saturate(.7)}.tile h3{font:normal 28px Georgia,serif;letter-spacing:-.03em}.tile p{font-size:14px;color:var(--muted);margin-top:8px}.tile .cue{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-top:auto;padding-top:22px}.tile .revealed{display:none}.tile.is-open .default{display:none}.tile.is-open .revealed{display:block}.tile.is-open{background:#ece1d0}.feature{background:#e8e0d3;padding:68px 0;border-top:1px solid #d9cfc0;border-bottom:1px solid #d9cfc0}.feature-layout{display:grid;grid-template-columns:1fr 1fr;gap:75px;align-items:center}.feature h2{font:normal clamp(38px,5vw,62px)/1.08 Georgia,serif;letter-spacing:-.05em;margin:12px 0 20px}.feature p{color:#676057;max-width:430px;margin-bottom:26px}.bookmark{border:1px solid #c6b8a5;background:#f9f5ed;min-height:365px;padding:40px 45px;position:relative;box-shadow:12px 13px 0 #cec2b3;display:flex;flex-direction:column;justify-content:space-between}.bookmark:before{content:"";position:absolute;right:35px;top:0;border-left:18px solid transparent;border-right:18px solid transparent;border-top:56px solid #a24e37}.bookmark .heading{font:12px system-ui;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}.bookmark .quote{font:italic clamp(26px,3.3vw,39px)/1.3 Georgia,serif;color:var(--coffee)}.bookmark .foot{font-size:12px;letter-spacing:.11em;text-transform:uppercase;color:#857b70}.pit{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}.track{border:1px solid var(--line);background:var(--cream);padding:27px;min-height:290px}.track .track-label{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase}.lights{display:flex;gap:10px;justify-content:center;margin:36px 0 30px}.light{width:41px;height:41px;border-radius:50%;background:#cbc7bf;border:6px solid #32322e;box-shadow:inset 0 0 6px #0003;transition:background .1s}.light.red{background:#b5392d;box-shadow:0 0 17px #be3e3470}.light.green{background:#82a57a;box-shadow:0 0 16px #82a57a66}.status{font:normal 23px Georgia,serif;min-height:48px;text-align:center}.track .btn{display:block;margin:8px auto}.tiny{font-size:12px;color:var(--muted);text-align:center;margin-top:12px}.note-section{padding:92px 0}.note-panel{background:var(--cream);border:1px solid var(--line);max-width:740px;margin:auto;padding:clamp(28px,6vw,70px);position:relative}.note-panel:after{content:"10 / 11";position:absolute;right:20px;top:18px;font-size:11px;letter-spacing:.15em;color:#aba194}.note-panel h2{font:normal clamp(35px,5vw,52px) Georgia,serif;letter-spacing:-.04em;margin:10px 0 28px}.note-panel p{font:19px/1.85 Georgia,serif;color:#4d473f;margin:0 0 20px}.note-panel .signoff{font-style:italic;color:var(--coffee);margin-top:24px;margin-bottom:0}.footer{padding:28px 0 45px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:var(--muted);font-size:12px;letter-spacing:.08em}.toast{position:fixed;bottom:25px;left:50%;transform:translate(-50%,20px);background:var(--ink);color:#fff;padding:12px 22px;border-radius:3px;font-size:13px;opacity:0;pointer-events:none;transition:opacity .3s,transform .3s;z-index:5}.toast.show{opacity:1;transform:translate(-50%,0)}@media(max-width:780px){.hero{grid-template-columns:1fr;padding:60px 0 90px;gap:10px;min-height:0}.hero h1{font-size:clamp(62px,13vw,100px)}.hero-art{min-height:390px}.paper{height:350px;max-width:275px}.grid{grid-template-columns:1fr}.tile{min-height:195px}.feature-layout,.pit{grid-template-columns:1fr;gap:30px}.section{padding:65px 0}.section-head{display:block}.sub{margin-top:12px}.feature{padding:60px 0}.bookmark{min-height:300px}.note-section{padding:65px 0}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#f5f0e7">
+    <meta name="description" content="A small birthday page. November 10.">
+    <title>November 10 · a little birthday edition</title>
+    <style>
+        :root {
+            --paper: #f5f0e7;
+            --cream: #fffcf5;
+            --ink: #292923;
+            --muted: #77766c;
+            --line: #d8d1c5;
+            --coffee: #654537;
+            --accent: #a54f35;
+            --olive: #777d61
+        }
 
-/* Phone-first finishing touches */
-html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
-body{overflow-x:hidden;overflow-wrap:break-word}
-button{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
-.btn{min-height:48px;display:inline-flex;align-items:center;justify-content:center}
-.tile{width:100%;min-height:220px;touch-action:manipulation}
-@media(hover:none){.tile:hover,.btn:hover{transform:none;box-shadow:none}}
-@media(max-width:600px){
-.shell{width:calc(100% - 36px)}
-.top{height:64px;gap:8px}.wordmark{font-size:10px;letter-spacing:.11em}.small-date{font-size:10px;letter-spacing:.06em;white-space:nowrap}
-.hero{padding:46px 0 58px;gap:14px}.hero h1{font-size:clamp(48px,12.1vw,76px);letter-spacing:-.065em;line-height:1.04}
-.kicker{margin-bottom:15px;font-size:10px}.intro{font-size:16px;line-height:1.65;margin:20px 0 24px}
-.hero-art{min-height:340px;padding:20px 14px 18px 0}.paper{width:min(270px,82%);height:320px;padding:23px 21px;transform:rotate(3deg)}
-.paper .scribble{font-size:22px}.paper .topline,.paper .folio{font-size:9px}.dessert{transform:scale(.8) rotate(-5deg)}
-.corner-mark{right:0;bottom:19px;font-size:9px;padding:10px 12px;transform:rotate(6deg)}
-.section{padding:55px 0}.section-head{margin-bottom:22px}.section-head h2{font-size:clamp(34px,9vw,49px)}
-.grid{gap:12px}.tile{padding:23px;min-height:205px}.tile h3{font-size:26px}.tile .symbol{font-size:36px;margin:8px 0 10px}.tile .cue{padding-top:17px}
-.feature{padding:50px 0}.feature-layout,.pit{gap:27px}.feature h2{font-size:clamp(36px,10vw,49px)}
-.bookmark{min-height:295px;padding:30px 27px;box-shadow:7px 8px 0 #cec2b3}.bookmark .quote{font-size:clamp(25px,7vw,35px);padding-right:4px}
-.track{padding:22px 14px;min-height:265px}.lights{gap:clamp(5px,2vw,10px);margin:32px 0 26px}.light{width:clamp(34px,10vw,41px);height:clamp(34px,10vw,41px);border-width:5px}
-.status{font-size:21px}.note-section{padding:55px 0}.note-panel{padding:32px 23px}.note-panel h2{font-size:39px}.note-panel p{font-size:17px;line-height:1.8}
-.footer{padding:23px 0 34px;gap:6px;font-size:10px;line-height:1.6}
-.toast{width:calc(100% - 36px);text-align:center;bottom:calc(18px + env(safe-area-inset-bottom))}
-}
-@media(max-width:360px){.shell{width:calc(100% - 28px)}.wordmark{font-size:9px}.small-date{font-size:9px}.hero h1{font-size:46px}.paper{width:245px}.bookmark{padding:27px 23px}}
-</style>
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            margin: 0;
+            background: var(--paper);
+            color: var(--ink);
+            font: 16px/1.6 system-ui, -apple-system, Segoe UI, sans-serif
+        }
+
+        button {
+            font: inherit;
+            cursor: pointer
+        }
+
+        button:focus-visible,
+        a:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 4px
+        }
+
+        h1,
+        h2,
+        h3,
+        p {
+            margin: 0
+        }
+
+        .serif {
+            font-family: Georgia, Times New Roman, serif
+        }
+
+        .shell {
+            width: min(1080px, calc(100% - 44px));
+            margin: auto
+        }
+
+        .top {
+            height: 78px;
+            border-bottom: 1px solid var(--line);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px
+        }
+
+        .wordmark {
+            font: 600 12px/1.3 system-ui;
+            letter-spacing: .19em;
+            text-transform: uppercase
+        }
+
+        .small-date {
+            font-size: 12px;
+            letter-spacing: .13em;
+            color: var(--muted);
+            text-transform: uppercase
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: 1.1fr .9fr;
+            gap: 50px;
+            min-height: 610px;
+            align-items: center;
+            padding: 90px 0 100px
+        }
+
+        .kicker {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: .2em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 22px
+        }
+
+        .hero h1 {
+            font: normal clamp(60px, 9vw, 118px)/.99 Georgia, serif;
+            letter-spacing: -.07em;
+            max-width: 710px
+        }
+
+        .hero h1 i {
+            color: var(--coffee);
+            font-weight: normal
+        }
+
+        .intro {
+            font-size: 17px;
+            color: #5e5b52;
+            max-width: 440px;
+            margin: 28px 0 30px
+        }
+
+        .btn {
+            border: 1px solid var(--ink);
+            background: var(--ink);
+            color: var(--cream);
+            padding: 13px 22px;
+            border-radius: 3px;
+            transition: background .2s, transform .2s
+        }
+
+        .btn:hover {
+            background: var(--coffee);
+            transform: translateY(-2px)
+        }
+
+        .btn.ghost {
+            background: transparent;
+            color: var(--ink)
+        }
+
+        .btn.ghost:hover {
+            background: #ebe4da
+        }
+
+        .hero-art {
+            position: relative;
+            min-height: 430px;
+            display: grid;
+            place-items: center
+        }
+
+        .paper {
+            width: min(350px, 90%);
+            height: 425px;
+            background: #eee5d6;
+            border: 1px solid #d1c4ae;
+            box-shadow: 17px 20px 0 #e2d9ca, 20px 25px 35px #38312020;
+            transform: rotate(5deg);
+            padding: 30px 28px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative
+        }
+
+        .paper:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background: repeating-linear-gradient(transparent 0, transparent 34px, #c8bda61f 35px, #c8bda61f 36px);
+            pointer-events: none
+        }
+
+        .paper .topline {
+            font: 11px system-ui;
+            letter-spacing: .17em;
+            color: #6a5745
+        }
+
+        .paper .illustration {
+            font: normal 78px Georgia, serif;
+            color: #79503c;
+            text-align: center;
+            line-height: 1
+        }
+
+        .dessert {
+            width: 154px;
+            height: 112px;
+            margin: auto;
+            position: relative;
+            transform: rotate(-5deg)
+        }
+
+        .dessert .dust {
+            height: 13px;
+            background: #543c2e;
+            border-radius: 8px 8px 0 0
+        }
+
+        .dessert .layer {
+            height: 25px;
+            background: #e7cda3;
+            border: 2px solid #a8835e;
+            border-top: none
+        }
+
+        .dessert .layer:nth-child(3) {
+            background: #a47758
+        }
+
+        .dessert .layer:nth-child(4) {
+            background: #f7e9c9;
+            border-radius: 0 0 12px 12px
+        }
+
+        .paper .scribble {
+            font: italic 25px/1.3 Georgia, serif;
+            color: #6f4b3b;
+            transform: rotate(-5deg)
+        }
+
+        .paper .folio {
+            font: 11px system-ui;
+            color: #8e806c;
+            letter-spacing: .13em
+        }
+
+        .corner-mark {
+            position: absolute;
+            right: -25px;
+            bottom: 35px;
+            background: #a74f36;
+            color: #fff;
+            padding: 12px 18px;
+            transform: rotate(10deg);
+            font-size: 11px;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            box-shadow: 0 10px 22px #0002
+        }
+
+        .rule {
+            border-top: 1px solid var(--line)
+        }
+
+        .section {
+            padding: 85px 0
+        }
+
+        .section-head {
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+            gap: 30px;
+            margin-bottom: 32px
+        }
+
+        .section-head h2 {
+            font: normal clamp(37px, 5vw, 58px)/1.1 Georgia, serif;
+            letter-spacing: -.045em
+        }
+
+        .sub {
+            font-size: 14px;
+            color: var(--muted);
+            max-width: 300px
+        }
+
+        .index {
+            font: 12px system-ui;
+            letter-spacing: .12em;
+            color: var(--accent)
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 17px
+        }
+
+        .tile {
+            border: 1px solid var(--line);
+            background: var(--cream);
+            padding: 28px;
+            min-height: 255px;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            transition: transform .2s, box-shadow .2s
+        }
+
+        .tile:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 25px #3d302017
+        }
+
+        .tile .num {
+            font: 11px system-ui;
+            letter-spacing: .15em;
+            color: var(--accent)
+        }
+
+        .tile .symbol {
+            font-size: 42px;
+            margin: 12px 0 16px;
+            filter: saturate(.7)
+        }
+
+        .tile h3 {
+            font: normal 28px Georgia, serif;
+            letter-spacing: -.03em
+        }
+
+        .tile p {
+            font-size: 14px;
+            color: var(--muted);
+            margin-top: 8px
+        }
+
+        .tile .cue {
+            font-size: 11px;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-top: auto;
+            padding-top: 22px
+        }
+
+        .tile .revealed {
+            display: none
+        }
+
+        .tile.is-open .default {
+            display: none
+        }
+
+        .tile.is-open .revealed {
+            display: block
+        }
+
+        .tile.is-open {
+            background: #ece1d0
+        }
+
+        .feature {
+            background: #e8e0d3;
+            padding: 68px 0;
+            border-top: 1px solid #d9cfc0;
+            border-bottom: 1px solid #d9cfc0
+        }
+
+        .feature-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 75px;
+            align-items: center
+        }
+
+        .feature h2 {
+            font: normal clamp(38px, 5vw, 62px)/1.08 Georgia, serif;
+            letter-spacing: -.05em;
+            margin: 12px 0 20px
+        }
+
+        .feature p {
+            color: #676057;
+            max-width: 430px;
+            margin-bottom: 26px
+        }
+
+        .bookmark {
+            border: 1px solid #c6b8a5;
+            background: #f9f5ed;
+            min-height: 365px;
+            padding: 40px 45px;
+            position: relative;
+            box-shadow: 12px 13px 0 #cec2b3;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between
+        }
+
+        .bookmark:before {
+            content: "";
+            position: absolute;
+            right: 35px;
+            top: 0;
+            border-left: 18px solid transparent;
+            border-right: 18px solid transparent;
+            border-top: 56px solid #a24e37
+        }
+
+        .bookmark .heading {
+            font: 12px system-ui;
+            letter-spacing: .2em;
+            text-transform: uppercase;
+            color: var(--muted)
+        }
+
+        .bookmark .quote {
+            font: italic clamp(26px, 3.3vw, 39px)/1.3 Georgia, serif;
+            color: var(--coffee)
+        }
+
+        .bookmark .foot {
+            font-size: 12px;
+            letter-spacing: .11em;
+            text-transform: uppercase;
+            color: #857b70
+        }
+
+        .pit {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center
+        }
+
+        .track {
+            border: 1px solid var(--line);
+            background: var(--cream);
+            padding: 27px;
+            min-height: 290px
+        }
+
+        .track .track-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 11px;
+            color: var(--muted);
+            letter-spacing: .12em;
+            text-transform: uppercase
+        }
+
+        .lights {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin: 36px 0 30px
+        }
+
+        .light {
+            width: 41px;
+            height: 41px;
+            border-radius: 50%;
+            background: #cbc7bf;
+            border: 6px solid #32322e;
+            box-shadow: inset 0 0 6px #0003;
+            transition: background .1s
+        }
+
+        .light.red {
+            background: #b5392d;
+            box-shadow: 0 0 17px #be3e3470
+        }
+
+        .light.green {
+            background: #82a57a;
+            box-shadow: 0 0 16px #82a57a66
+        }
+
+        .status {
+            font: normal 23px Georgia, serif;
+            min-height: 48px;
+            text-align: center
+        }
+
+        .track .btn {
+            display: block;
+            margin: 8px auto
+        }
+
+        .tiny {
+            font-size: 12px;
+            color: var(--muted);
+            text-align: center;
+            margin-top: 12px
+        }
+
+        .note-section {
+            padding: 92px 0
+        }
+
+        .note-panel {
+            background: var(--cream);
+            border: 1px solid var(--line);
+            max-width: 740px;
+            margin: auto;
+            padding: clamp(28px, 6vw, 70px);
+            position: relative
+        }
+
+        .note-panel:after {
+            content: "10 / 11";
+            position: absolute;
+            right: 20px;
+            top: 18px;
+            font-size: 11px;
+            letter-spacing: .15em;
+            color: #aba194
+        }
+
+        .note-panel h2 {
+            font: normal clamp(35px, 5vw, 52px) Georgia, serif;
+            letter-spacing: -.04em;
+            margin: 10px 0 28px
+        }
+
+        .note-panel p {
+            font: 19px/1.85 Georgia, serif;
+            color: #4d473f;
+            margin: 0 0 20px
+        }
+
+        .note-panel .signoff {
+            font-style: italic;
+            color: var(--coffee);
+            margin-top: 24px;
+            margin-bottom: 0
+        }
+
+        .footer {
+            padding: 28px 0 45px;
+            border-top: 1px solid var(--line);
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+            color: var(--muted);
+            font-size: 12px;
+            letter-spacing: .08em
+        }
+
+        .toast {
+            position: fixed;
+            bottom: 25px;
+            left: 50%;
+            transform: translate(-50%, 20px);
+            background: var(--ink);
+            color: #fff;
+            padding: 12px 22px;
+            border-radius: 3px;
+            font-size: 13px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity .3s, transform .3s;
+            z-index: 5
+        }
+
+        .toast.show {
+            opacity: 1;
+            transform: translate(-50%, 0)
+        }
+
+        @media(max-width:780px) {
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 60px 0 90px;
+                gap: 10px;
+                min-height: 0
+            }
+
+            .hero h1 {
+                font-size: clamp(62px, 13vw, 100px)
+            }
+
+            .hero-art {
+                min-height: 390px
+            }
+
+            .paper {
+                height: 350px;
+                max-width: 275px
+            }
+
+            .grid {
+                grid-template-columns: 1fr
+            }
+
+            .tile {
+                min-height: 195px
+            }
+
+            .feature-layout,
+            .pit {
+                grid-template-columns: 1fr;
+                gap: 30px
+            }
+
+            .section {
+                padding: 65px 0
+            }
+
+            .section-head {
+                display: block
+            }
+
+            .sub {
+                margin-top: 12px
+            }
+
+            .feature {
+                padding: 60px 0
+            }
+
+            .bookmark {
+                min-height: 300px
+            }
+
+            .note-section {
+                padding: 65px 0
+            }
+        }
+
+        @media(prefers-reduced-motion:reduce) {
+            html {
+                scroll-behavior: auto
+            }
+
+            *,
+            *:before,
+            *:after {
+                transition: none !important;
+                animation: none !important
+            }
+        }
+
+        /* Phone-first finishing touches */
+        html {
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%
+        }
+
+        body {
+            overflow-x: hidden;
+            overflow-wrap: break-word
+        }
+
+        button {
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation
+        }
+
+        .btn {
+            min-height: 48px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center
+        }
+
+        .tile {
+            width: 100%;
+            min-height: 220px;
+            touch-action: manipulation
+        }
+
+        @media(hover:none) {
+
+            .tile:hover,
+            .btn:hover {
+                transform: none;
+                box-shadow: none
+            }
+        }
+
+        @media(max-width:600px) {
+            .shell {
+                width: calc(100% - 36px)
+            }
+
+            .top {
+                height: 64px;
+                gap: 8px
+            }
+
+            .wordmark {
+                font-size: 10px;
+                letter-spacing: .11em
+            }
+
+            .small-date {
+                font-size: 10px;
+                letter-spacing: .06em;
+                white-space: nowrap
+            }
+
+            .hero {
+                padding: 46px 0 58px;
+                gap: 14px
+            }
+
+            .hero h1 {
+                font-size: clamp(48px, 12.1vw, 76px);
+                letter-spacing: -.065em;
+                line-height: 1.04
+            }
+
+            .kicker {
+                margin-bottom: 15px;
+                font-size: 10px
+            }
+
+            .intro {
+                font-size: 16px;
+                line-height: 1.65;
+                margin: 20px 0 24px
+            }
+
+            .hero-art {
+                min-height: 340px;
+                padding: 20px 14px 18px 0
+            }
+
+            .paper {
+                width: min(270px, 82%);
+                height: 320px;
+                padding: 23px 21px;
+                transform: rotate(3deg)
+            }
+
+            .paper .scribble {
+                font-size: 22px
+            }
+
+            .paper .topline,
+            .paper .folio {
+                font-size: 9px
+            }
+
+            .dessert {
+                transform: scale(.8) rotate(-5deg)
+            }
+
+            .corner-mark {
+                right: 0;
+                bottom: 19px;
+                font-size: 9px;
+                padding: 10px 12px;
+                transform: rotate(6deg)
+            }
+
+            .section {
+                padding: 55px 0
+            }
+
+            .section-head {
+                margin-bottom: 22px
+            }
+
+            .section-head h2 {
+                font-size: clamp(34px, 9vw, 49px)
+            }
+
+            .grid {
+                gap: 12px
+            }
+
+            .tile {
+                padding: 23px;
+                min-height: 205px
+            }
+
+            .tile h3 {
+                font-size: 26px
+            }
+
+            .tile .symbol {
+                font-size: 36px;
+                margin: 8px 0 10px
+            }
+
+            .tile .cue {
+                padding-top: 17px
+            }
+
+            .feature {
+                padding: 50px 0
+            }
+
+            .feature-layout,
+            .pit {
+                gap: 27px
+            }
+
+            .feature h2 {
+                font-size: clamp(36px, 10vw, 49px)
+            }
+
+            .bookmark {
+                min-height: 295px;
+                padding: 30px 27px;
+                box-shadow: 7px 8px 0 #cec2b3
+            }
+
+            .bookmark .quote {
+                font-size: clamp(25px, 7vw, 35px);
+                padding-right: 4px
+            }
+
+            .track {
+                padding: 22px 14px;
+                min-height: 265px
+            }
+
+            .lights {
+                gap: clamp(5px, 2vw, 10px);
+                margin: 32px 0 26px
+            }
+
+            .light {
+                width: clamp(34px, 10vw, 41px);
+                height: clamp(34px, 10vw, 41px);
+                border-width: 5px
+            }
+
+            .status {
+                font-size: 21px
+            }
+
+            .note-section {
+                padding: 55px 0
+            }
+
+            .note-panel {
+                padding: 32px 23px
+            }
+
+            .note-panel h2 {
+                font-size: 39px
+            }
+
+            .note-panel p {
+                font-size: 17px;
+                line-height: 1.8
+            }
+
+            .footer {
+                padding: 23px 0 34px;
+                gap: 6px;
+                font-size: 10px;
+                line-height: 1.6
+            }
+
+            .toast {
+                width: calc(100% - 36px);
+                text-align: center;
+                bottom: calc(18px + env(safe-area-inset-bottom))
+            }
+        }
+
+        @media(max-width:360px) {
+            .shell {
+                width: calc(100% - 28px)
+            }
+
+            .wordmark {
+                font-size: 9px
+            }
+
+            .small-date {
+                font-size: 9px
+            }
+
+            .hero h1 {
+                font-size: 46px
+            }
+
+            .paper {
+                width: 245px
+            }
+
+            .bookmark {
+                padding: 27px 23px
+            }
+        }
+    </style>
 </head>
+
 <body>
-<header class="top shell"><span class="wordmark">A small birthday edition</span><span class="small-date">10 November</span></header>
-<main>
-<section class="hero shell" id="start"><div><p class="kicker"></p><h1>Another year.<br><i>A good story.</i></h1><p class="intro">Happy birthday. I personally made you a little page inspired by few things you like. Nothing over the top, just something that felt more personal than a regular text.</p><button class="btn" id="explore">Take a look ↓</button></div><div class="hero-art" aria-label="Illustration of a journal page and a slice of tiramisu"><div class="paper"><span class="topline">NOTES ON A GOOD DAY</span><div><div class="dessert" aria-hidden="true"><div class="dust"></div><div class="layer"></div><div class="layer"></div><div class="layer"></div></div></div><div class="scribble">a little of the good stuff.</div><span class="folio">VOL. 01 — NOVEMBER 10</span></div><div class="corner-mark">Birthday edition</div></div></section>
-<div class="rule"></div>
-<section class="section shell" id="contents"><div class="section-head"><div><div class="kicker">The contents</div><h2>Three things, one page.</h2></div><p class="sub">A tiny nod to your taste. Tap each one to turn the page.</p></div><div class="grid">
-<button class="tile" aria-pressed="false"><span class="num">01 / DESSERT</span><span class="default"><span class="symbol">☕</span><h3>Tiramisu</h3><p>Because some favourites are non negotiable.</p></span><span class="revealed"><span class="symbol">🍰</span><h3>Birthday requirement</h3><p>I hope there's a really good tiramisu somewhere in your day. Ideally, one worth saving room for.</p></span><span class="cue">Tap to flip ↗</span></button>
-<button class="tile" aria-pressed="false"><span class="num">02 / STORIES</span><span class="default"><span class="symbol">📖</span><h3>Books & pages</h3><p>For someone who enjoys a good story.</p></span><span class="revealed"><span class="symbol">✎</span><h3>Blank pages</h3><p>Here's to filling the next ones with interesting thoughts, unexpected plans and things worth remembering.(I'll explain the catch when I meet you on 14th November)</p></span><span class="cue">Tap to flip ↗</span></button>
-<button class="tile" aria-pressed="false"><span class="num">03 / RACE WEEKEND</span><span class="default"><span class="symbol">🏁</span><h3>A little F1</h3><p>For the occasional need for speed.</p></span><span class="revealed"><span class="symbol">🏎️</span><h3>Good things ahead</h3><p>Hope the year brings plenty of good turns, great weekends and a few unexpected wins.</p></span><span class="cue">Tap to flip ↗</span></button>
-</div></section>
-<section class="feature"><div class="feature-layout shell"><div><div class="kicker">A note between pages</div><h2>For the next chapter.</h2><p>New pages don't need a perfect plan. Just a little curiosity and a few things worth writing down.</p><button class="btn ghost" id="bookmarkBtn">Turn the bookmark ↻</button></div><div class="bookmark" id="bookmark" aria-live="polite"><span class="heading">A bookmark for you</span><div class="quote" id="quote">“May this chapter be a really good one.”</div><span class="foot" id="quoteFoot">Page 01 of 04</span></div></div></section>
-<section class="section shell"><div class="pit"><div><div class="kicker">A tiny detour · race day</div><h2 class="serif" style="font-size:clamp(38px,5vw,60px);font-weight:normal;line-height:1.1;letter-spacing:-.045em;margin:0 0 20px">Five lights.<br>One birthday.</h2><p style="color:var(--muted);max-width:430px">I couldn't make a page about our favourites without at least one small racing reference. Try the start sequence.</p></div><div class="track"><div class="track-label"><span>Birthday Grand Prix</span><span>Formation lap</span></div><div class="lights" aria-hidden="true"><span class="light"></span><span class="light"></span><span class="light"></span><span class="light"></span><span class="light"></span></div><div class="status" id="raceStatus" aria-live="polite">Ready when you are.</div><button class="btn" id="raceBtn">Start the lights</button><p class="tiny">No lap time required. It's your birthday.</p></div></div></section>
-<div class="rule"></div>
-<section class="note-section shell" id="birthday-note">
-  <article class="note-panel">
-    <div class="kicker">The last page</div>
-    <h2>Happy birthday again!</h2>
+    <header class="top shell"><span class="wordmark">A small birthday edition</span><span class="small-date">10
+            November</span></header>
+    <main>
+        <section class="hero shell" id="start">
+            <div>
+                <p class="kicker"></p>
+                <h1>Another year.<br><i>A good story.</i></h1>
+                <p class="intro">Happy birthday. I personally made you a little page inspired by few things you like.
+                    Nothing over the top, just something that felt more personal than a regular text.</p><button
+                    class="btn" id="explore">Take a look ↓</button>
+            </div>
+            <div class="hero-art" aria-label="Illustration of a journal page and a slice of tiramisu">
+                <div class="paper"><span class="topline">NOTES ON A GOOD DAY</span>
+                    <div>
+                        <div class="dessert" aria-hidden="true">
+                            <div class="dust"></div>
+                            <div class="layer"></div>
+                            <div class="layer"></div>
+                            <div class="layer"></div>
+                        </div>
+                    </div>
+                    <div class="scribble">a little of the good stuff.</div><span class="folio">VOL. 01 — NOVEMBER
+                        10</span>
+                </div>
+                <div class="corner-mark">Birthday edition</div>
+            </div>
+        </section>
+        <div class="rule"></div>
+        <section class="section shell" id="contents">
+            <div class="section-head">
+                <div>
+                    <div class="kicker">The contents</div>
+                    <h2>Three things, one page.</h2>
+                </div>
+                <p class="sub">A tiny nod to your taste. Tap each one to turn the page.</p>
+            </div>
+            <div class="grid">
+                <button class="tile" aria-pressed="false"><span class="num">01 / DESSERT</span><span
+                        class="default"><span class="symbol">☕</span>
+                        <h3>Tiramisu</h3>
+                        <p>Because some favourites are non negotiable.</p>
+                    </span><span class="revealed"><span class="symbol">🍰</span>
+                        <h3>Birthday requirement</h3>
+                        <p>I hope there's a really good tiramisu somewhere in your day. Ideally, one worth saving room
+                            for.</p>
+                    </span><span class="cue">Tap to flip ↗</span></button>
+                <button class="tile" aria-pressed="false"><span class="num">02 / STORIES</span><span
+                        class="default"><span class="symbol">📖</span>
+                        <h3>Books & pages</h3>
+                        <p>For someone who enjoys a good story.</p>
+                    </span><span class="revealed"><span class="symbol">✎</span>
+                        <h3>Blank pages</h3>
+                        <p>Here's to filling the next ones with interesting thoughts, unexpected plans and things worth
+                            remembering.(I'll explain the catch when I meet you on 14th November)</p>
+                    </span><span class="cue">Tap to flip ↗</span></button>
+                <button class="tile" aria-pressed="false"><span class="num">03 / RACE WEEKEND</span><span
+                        class="default"><span class="symbol">🏁</span>
+                        <h3>A little F1</h3>
+                        <p>For the occasional need for speed.</p>
+                    </span><span class="revealed"><span class="symbol">🏎️</span>
+                        <h3>Good things ahead</h3>
+                        <p>Hope the year brings plenty of good turns, great weekends and a few unexpected wins.</p>
+                    </span><span class="cue">Tap to flip ↗</span></button>
+            </div>
+        </section>
+        <section class="feature">
+            <div class="feature-layout shell">
+                <div>
+                    <div class="kicker">A note between pages</div>
+                    <h2>For the next chapter.</h2>
+                    <p>New pages don't need a perfect plan. Just a little curiosity and a few things worth writing down.
+                    </p><button class="btn ghost" id="bookmarkBtn">Turn the bookmark ↻</button>
+                </div>
+                <div class="bookmark" id="bookmark" aria-live="polite"><span class="heading">A bookmark for you</span>
+                    <div class="quote" id="quote">“May this chapter be a really good one.”</div><span class="foot"
+                        id="quoteFoot">Page 01 of 04</span>
+                </div>
+            </div>
+        </section>
+        <section class="section shell">
+            <div class="pit">
+                <div>
+                    <div class="kicker">A tiny detour · race day</div>
+                    <h2 class="serif"
+                        style="font-size:clamp(38px,5vw,60px);font-weight:normal;line-height:1.1;letter-spacing:-.045em;margin:0 0 20px">
+                        Five lights.<br>One birthday.</h2>
+                    <p style="color:var(--muted);max-width:430px">I couldn't make a page without a little nod to our shared love for F1. 
+                        Ready for lights out? Try the start sequence!
+                    </p>
+                </div>
+                <div class="track">
+                    <div class="track-label"><span>Birthday Grand Prix</span><span>Formation lap</span></div>
+                    <div class="lights" aria-hidden="true"><span class="light"></span><span class="light"></span><span
+                            class="light"></span><span class="light"></span><span class="light"></span></div>
+                    <div class="status" id="raceStatus" aria-live="polite">Ready when you are.</div><button class="btn"
+                        id="raceBtn">Start the lights</button>
+                    <p class="tiny">No lap time required. It's your birthday.</p>
+                </div>
+            </div>
+        </section>
+        <div class="rule"></div>
+        <section class="note-section shell" id="birthday-note">
+            <article class="note-panel">
+                <div class="kicker">The last page</div>
+                <h2>Happy birthday again!</h2>
 
-    <p>It's been really nice getting to know you these past few weeks.</p>
+                <p>It's been really nice getting to know you these past few weeks.</p>
 
-    <p>I just wanted to make something a little different for you. I hope November 10 brings you good food, good company, and plenty of reasons to smile.</p>
+                <p>I just wanted to make something a little different for you. I hope November 10 brings you good food,
+                    good company, and plenty of reasons to smile.</p>
 
-    <p class="signoff">Have a lovely birthday :)</p>
-  </article>
-</section></main><footer class="footer shell"><span>MADE WITH A LITTLE CODE & A BIT OF THOUGHT</span><span>10 NOVEMBER · JUST FOR YOU</span></footer><div class="toast" id="toast" role="status" aria-live="polite"></div>
-<script>
-(()=>{'use strict';const $=s=>document.querySelector(s);const all=s=>[...document.querySelectorAll(s)];const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;$('#explore').onclick=()=>$('#contents').scrollIntoView({behavior:reduced?'instant':'smooth'});all('.tile').forEach(el=>el.onclick=()=>{const open=el.classList.toggle('is-open');el.setAttribute('aria-pressed',String(open));el.querySelector('.cue').textContent=open?'Tap to go back ↶':'Tap to flip ↗'});const quotes=['“May this chapter be a really good one.”','“Collect moments worth writing about.”','“The best stories leave room for surprises.”','“A little curiosity goes a long way.”'];let q=0;$('#bookmarkBtn').onclick=()=>{q=(q+1)%quotes.length;$('#quote').textContent=quotes[q];$('#quoteFoot').textContent=`Page ${String(q+1).padStart(2,'0')} of 04`};let playing=false;const pause=ms=>new Promise(r=>setTimeout(r,ms));$('#raceBtn').onclick=async()=>{if(playing)return;playing=true;const b=$('#raceBtn'),status=$('#raceStatus'),lights=all('.light');b.disabled=true;b.textContent='Lights on…';lights.forEach(x=>x.className='light');status.textContent='Starting sequence';for(let i=0;i<5;i++){await pause(480);lights[i].classList.add('red')}await pause(800+Math.random()*950);lights.forEach(x=>x.classList.remove('red'));status.textContent='LIGHTS OUT — HAPPY GIRLS BIRTHDAY!';await pause(850);lights.forEach(x=>x.classList.add('green'));b.textContent='Run it again ↻';b.disabled=false;playing=false};})();
-</script>
-</body></html>
+                <p class="signoff">Have a lovely birthday :)</p>
+            </article>
+        </section>
+    </main>
+    <footer class="footer shell"><span>MADE WITH A LITTLE CODE & A BIT OF THOUGHT</span><span>10 NOVEMBER · JUST FOR
+            YOU</span></footer>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script>
+        (() => {'use strict'; const $ = s => document.querySelector(s); const all = s => [...document.querySelectorAll(s)]; const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches; $('#explore').onclick = () => $('#contents').scrollIntoView({behavior: reduced ? 'instant' : 'smooth'}); all('.tile').forEach(el => el.onclick = () => {const open = el.classList.toggle('is-open'); el.setAttribute('aria-pressed', String(open)); el.querySelector('.cue').textContent = open ? 'Tap to go back ↶' : 'Tap to flip ↗'}); const quotes = ['“May this chapter be a really good one.”', '“Collect moments worth writing about.”', '“The best stories leave room for surprises.”', '“A little curiosity goes a long way.”']; let q = 0; $('#bookmarkBtn').onclick = () => {q = (q + 1) % quotes.length; $('#quote').textContent = quotes[q]; $('#quoteFoot').textContent = `Page ${String(q + 1).padStart(2, '0')} of 04`}; let playing = false; const pause = ms => new Promise(r => setTimeout(r, ms)); $('#raceBtn').onclick = async () => {if (playing) return; playing = true; const b = $('#raceBtn'), status = $('#raceStatus'), lights = all('.light'); b.disabled = true; b.textContent = 'Lights on…'; lights.forEach(x => x.className = 'light'); status.textContent = 'Starting sequence'; for (let i = 0; i < 5; i++) {await pause(480); lights[i].classList.add('red')} await pause(800 + Math.random() * 950); lights.forEach(x => x.classList.remove('red')); status.textContent = 'LIGHTS OUT — HAPPY GIRLS BIRTHDAY!'; await pause(850); lights.forEach(x => x.classList.add('green')); b.textContent = 'Run it again ↻'; b.disabled = false; playing = false};})();
+    </script>
+</body>
+
+</html>
